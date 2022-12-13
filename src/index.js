@@ -1,5 +1,6 @@
-import fetch from "node-fetch";
-import { Client, Events, GatewayIntentBits, Routes, REST, Integration } from "discord.js";
+// import fetch from "node-fetch";
+import commands from "./commands.js";
+import { Client, Events, GatewayIntentBits, Routes, REST } from "discord.js";
 import token from "../config.json" assert { type: "json" };
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -11,16 +12,6 @@ client.once(Events.ClientReady, async (c) => {
 });
 
 async function main() {
-	const commands = [
-		{
-			name: "ping",
-			description: "Replies with Pong!",
-		},
-		{
-			name: "meme",
-			description: "Freund will make you HAPPY!",
-		},
-	];
 	try {
 		await rest.put(Routes.applicationGuildCommands("1051643493577130004", "1051649341137354874"), { body: commands });
 		client.login(token.token);
