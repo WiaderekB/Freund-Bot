@@ -55,6 +55,9 @@ client.on(Events.InteractionCreate, (interaction) => {
 		case "kill":
 			kill(interaction);
 			break;
+		case "hug":
+			hug(interaction);
+			break;
 		case "inspire":
 			inspire(interaction);
 			break;
@@ -99,6 +102,17 @@ async function kill(i) {
 	console.log(
 		`${timeConverter(i.createdTimestamp)}
 		${i.user.username}#${i.user.discriminator} killed ${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}`
+	);
+}
+
+async function hug(i) {
+	const gif_result = await (await fetch("https://g.tenor.com/v1/random?&q=huging&key=LIVDSRZULELA&limit=1")).json();
+
+	i.reply(gif_result.results[0].url);
+
+	console.log(
+		`${timeConverter(i.createdTimestamp)}
+		${i.user.username}#${i.user.discriminator} huged ${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}`
 	);
 }
 
