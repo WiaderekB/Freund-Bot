@@ -1,3 +1,4 @@
+import fetch from "node-fetch";
 import { Client, Events, GatewayIntentBits, Routes, REST, Integration } from "discord.js";
 import token from "../config.json" assert { type: "json" };
 
@@ -14,6 +15,10 @@ async function main() {
 		{
 			name: "ping",
 			description: "Replies with Pong!",
+		},
+		{
+			name: "meme",
+			description: "Freund will make you HAPPY!",
 		},
 	];
 	try {
@@ -32,11 +37,19 @@ client.on(Events.InteractionCreate, (interaction) => {
 	switch (interaction.commandName) {
 		case "ping":
 			ping(interaction);
-
+			break;
+		case "meme":
+			meme(interaction);
 			break;
 	}
 });
 
 function ping(i) {
-	i.reply("s");
+	i.reply("Pong!");
+}
+
+async function meme(i) {
+	const img = await (await fetch("https://meme-api.com/gimme")).json();
+
+	i.reply(img.url);
 }
