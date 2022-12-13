@@ -16,5 +16,7 @@ const kill = new SlashCommandBuilder()
 	.setDescription("Freund will kill someone for you!")
 	.addMentionableOption((option) => option.setName("person").setDescription("Who do you wanna kill???").setRequired(true));
 
-const commands = [ping, meme, dice, kill];
+const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
+
+const commands = [ping, meme, dice, kill, inspire];
 export default commands;
