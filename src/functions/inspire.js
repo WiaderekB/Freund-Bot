@@ -1,5 +1,6 @@
 import { timeConverter } from "./timeConverter.js";
 import fetch from "node-fetch";
+import { EmbedBuilder } from "discord.js";
 
 export async function inspire(i) {
 	const quote = await (
@@ -10,7 +11,17 @@ export async function inspire(i) {
 		})
 	).json();
 
-	i.reply(quote[0].quote);
+	const embed = new EmbedBuilder()
+		.setColor(0x809696)
+		.setTitle(quote[0].quote)
+		.setAuthor({ name: "YOU! 😁", iconURL: `https://cdn.discordapp.com/avatars/${i.user.id}/${i.user.avatar}.png` })
+		.setTimestamp()
+		.setFooter({
+			text: "You will be someone important! 🌟",
+			iconURL: "https://cdn.discordapp.com/avatars/1051643493577130004/5e3ac8379ae3ceb815c8d746b25db9f0.png",
+		});
+
+	i.reply({ embeds: [embed] });
 
 	console.log(
 		`${timeConverter(i.createdTimestamp)}
