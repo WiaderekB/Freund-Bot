@@ -21,7 +21,7 @@ async function roll(i, first) {
 		.setThumbnail(`https://cdn.discordapp.com/avatars/${i.user.id}/${i.user.avatar}.png`)
 		.setTimestamp()
 		.setFooter({
-			text: "HOPEULLY you got what you wanted!",
+			text: "I HOPE you got what you wanted! 🎲",
 			iconURL: "https://cdn.discordapp.com/avatars/1051643493577130004/5e3ac8379ae3ceb815c8d746b25db9f0.png",
 		});
 
