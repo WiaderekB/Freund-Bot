@@ -42,7 +42,7 @@ client.on(Events.InteractionCreate, (interaction) => {
 			dice(interaction, client);
 			break;
 		case "kill":
-			kill(interaction);
+			kill(interaction, client);
 			break;
 		case "hug":
 			hug(interaction);
