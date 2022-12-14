@@ -39,7 +39,7 @@ client.on(Events.InteractionCreate, (interaction) => {
 			meme(interaction);
 			break;
 		case "dice":
-			dice(interaction);
+			dice(interaction, client);
 			break;
 		case "kill":
 			kill(interaction);
@@ -54,7 +54,7 @@ client.on(Events.InteractionCreate, (interaction) => {
 });
 
 client.on(Events.MessageCreate, (m) => {
-	if (m.author.bot) reutrn;
+	if (m.author.bot) return;
 
 	if (m.content == "freund") {
 		m.channel.send("**HEY! HEY! HEY!**");
