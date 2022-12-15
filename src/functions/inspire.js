@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import { EmbedBuilder } from "discord.js";
 
 export async function inspire(i) {
-	const quote = await (await fetch("https://generated.inspirobot.me/a/Kj6OaOLkJ0.jpg")).json();
+	const quote = await (await fetch("http://inspirobot.me/api?generate=true")).text();
 
 	const embed = new EmbedBuilder()
 		.setColor(0x809696)
@@ -20,6 +20,6 @@ export async function inspire(i) {
 
 	console.log(
 		`${timeConverter(i.createdTimestamp)}
-		${i.user.username}#${i.user.discriminator} asked for a quote"`
+		${i.user.username}#${i.user.discriminator} asked for a quote`
 	);
 }
