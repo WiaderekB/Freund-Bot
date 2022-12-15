@@ -1,6 +1,9 @@
 import commands from "./src/commands.js";
 import { Client, Events, GatewayIntentBits, Routes, REST } from "discord.js";
-import token from "./config.json" assert { type: "json" };
+
+import dotenv from "dotenv";
+dotenv.config();
+const token = process.env.TOKEN;
 
 import { timeConverter } from "./src/functions/timeConverter.js";
 import { meme } from "./src/functions/meme.js";
@@ -11,7 +14,7 @@ import { hug } from "./src/functions/hug.js";
 import { inspire } from "./src/functions/inspire.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
-const rest = new REST({ version: "10" }).setToken(token.token);
+const rest = new REST({ version: "10" }).setToken(token);
 
 client.once(Events.ClientReady, async (c) => {
 	console.clear();
@@ -22,7 +25,7 @@ client.once(Events.ClientReady, async (c) => {
 async function main() {
 	try {
 		await rest.put(Routes.applicationGuildCommands("1051643493577130004", "1051649341137354874"), { body: commands });
-		client.login(token.token);
+		client.login(token);
 	} catch (e) {
 		console.error(e);
 	}
