@@ -12,6 +12,7 @@ import { ping } from "./src/functions/ping.js";
 import { kill } from "./src/functions/kill.js";
 import { hug } from "./src/functions/hug.js";
 import { inspire } from "./src/functions/inspire.js";
+import { nsfw } from "./src/functions/nsfw.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const rest = new REST({ version: "10" }).setToken(token);
@@ -53,6 +54,9 @@ client.on(Events.InteractionCreate, (interaction) => {
 			break;
 		case "inspire":
 			inspire(interaction);
+			break;
+		case "nsfw":
+			nsfw(interaction);
 			break;
 	}
 });

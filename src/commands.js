@@ -4,6 +4,8 @@ const ping = new SlashCommandBuilder().setName("ping").setDescription("Replies w
 
 const meme = new SlashCommandBuilder().setName("meme").setDescription("Freund will make you HAPPY! ...with not funny meme.");
 
+const nsfw = new SlashCommandBuilder().setName("nsfw").setDescription("Freund will send you NSFW!");
+
 const dice = new SlashCommandBuilder()
 	.setName("dice")
 	.setDescription("Freund will do you a favor and ROLL a DICE for you!")
@@ -23,5 +25,5 @@ const hug = new SlashCommandBuilder()
 
 const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
 
-const commands = [ping, meme, dice, kill, hug, inspire];
+const commands = [ping, meme, dice, kill, hug, inspire, nsfw];
 export default commands;

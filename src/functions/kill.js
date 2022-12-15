@@ -30,7 +30,7 @@ Just kidding! Just kidding!
 	const embed_question = new EmbedBuilder()
 		.setColor(0x809696)
 		.setTitle(`@${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}, you died.`)
-		.setDescription(`Do you feel well-killed?`)
+		.setDescription(`<@${i.options.get("person").user.id}>, do you feel well-killed?`)
 		.setTimestamp()
 		.setFooter({
 			text: "BURN IN HELL! 🔥",

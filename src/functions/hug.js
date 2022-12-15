@@ -30,7 +30,7 @@ Give someone love too!
 	const embed_question = new EmbedBuilder()
 		.setColor(0x809696)
 		.setTitle(`@${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}, someone gave you LOVE!.`)
-		.setDescription(`Do you feel well-hugged?`)
+		.setDescription(`<@${i.options.get("person").user.id}>, do you feel well-hugged?`)
 		.setTimestamp()
 		.setFooter({
 			text: "We all LOVE YOU! 💞",
