@@ -49,7 +49,7 @@ client.on(Events.InteractionCreate, (interaction) => {
 			kill(interaction, client);
 			break;
 		case "hug":
-			hug(interaction);
+			hug(interaction, client);
 			break;
 		case "inspire":
 			inspire(interaction);

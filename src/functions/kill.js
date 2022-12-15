@@ -21,7 +21,7 @@ Just kidding! Just kidding!
 		)
 		.setThumbnail(`https://cdn.discordapp.com/avatars/${i.options.get("person").user.id}/${i.options.get("person").user.avatar}.png`)
 		.setTimestamp()
-		.setImage(gif_result.results[0].url)
+		.setImage(gif_result.results[0].media[0].gif.url)
 		.setFooter({
 			text: "Now you're KILLER! 🩸",
 			iconURL: "https://cdn.discordapp.com/avatars/1051643493577130004/5e3ac8379ae3ceb815c8d746b25db9f0.png",

@@ -13,7 +13,7 @@ export async function hug(i, c) {
 			} hugged you!`
 		)
 		.setDescription(
-			`LOVE IS EVERYWHERE!
+			`**LOVE IS EVERYWHERE!**
 			
 Give someone love too!
 		
@@ -21,7 +21,7 @@ Give someone love too!
 		)
 		.setThumbnail(`https://cdn.discordapp.com/avatars/${i.options.get("person").user.id}/${i.options.get("person").user.avatar}.png`)
 		.setTimestamp()
-		.setImage(gif_result.results[0].url)
+		.setImage(gif_result.results[0].media[0].gif.url)
 		.setFooter({
 			text: "That's so cute! 💕",
 			iconURL: "https://cdn.discordapp.com/avatars/1051643493577130004/5e3ac8379ae3ceb815c8d746b25db9f0.png",
@@ -59,6 +59,7 @@ Give someone love too!
 			.setColor(0x809696)
 			.setTitle(`@${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}, LOVE IS EVERYWHERE!`)
 			.setTimestamp()
+			.setDescription(`<@${i.options.get("person").user.id}>`)
 			.setFooter({
 				text: "Date? 😏",
 				iconURL: "https://cdn.discordapp.com/avatars/1051643493577130004/5e3ac8379ae3ceb815c8d746b25db9f0.png",
