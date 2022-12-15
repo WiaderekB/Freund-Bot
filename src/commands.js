@@ -6,6 +6,21 @@ const meme = new SlashCommandBuilder().setName("meme").setDescription("Freund wi
 
 const nsfw = new SlashCommandBuilder().setName("nsfw").setDescription("Freund will send you NSFW!");
 
+const pictureofus = new SlashCommandBuilder()
+	.setName("pictureofus")
+	.setDescription("You know what IT does.")
+	.addStringOption((option) =>
+		option
+			.setName("who")
+			.setDescription("The person you want picture of")
+			.addChoices(
+				{ name: "Fip", value: "filip" },
+				{ name: "Adm", value: "adam" },
+				{ name: "Kcpr", value: "kacper" },
+				{ name: "Brtek", value: "bartek" }
+			)
+	);
+
 const dice = new SlashCommandBuilder()
 	.setName("dice")
 	.setDescription("Freund will do you a favor and ROLL a DICE for you!")
@@ -25,5 +40,5 @@ const hug = new SlashCommandBuilder()
 
 const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
 
-const commands = [ping, meme, dice, kill, hug, inspire, nsfw];
+const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus];
 export default commands;
