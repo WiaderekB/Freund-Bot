@@ -1,14 +1,14 @@
-import commands from "./commands.js";
+import commands from "./src/commands.js";
 import { Client, Events, GatewayIntentBits, Routes, REST } from "discord.js";
-import token from "../config.json" assert { type: "json" };
+import token from "./config.json" assert { type: "json" };
 
-import { timeConverter } from "./functions/timeConverter.js";
-import { ping } from "./functions/ping.js";
-import { meme } from "./functions/meme.js";
-import { dice } from "./functions/dice.js";
-import { kill } from "./functions/kill.js";
-import { hug } from "./functions/hug.js";
-import { inspire } from "./functions/inspire.js";
+import { timeConverter } from "./src/functions/timeConverter.js";
+import { meme } from "./src/functions/meme.js";
+import { dice } from "./src/functions/dice.js";
+import { ping } from "./src/functions/ping.js";
+import { kill } from "./src/functions/kill.js";
+import { hug } from "./src/functions/hug.js";
+import { inspire } from "./src/functions/inspire.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const rest = new REST({ version: "10" }).setToken(token.token);
