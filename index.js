@@ -25,6 +25,7 @@ client.once(Events.ClientReady, async (c) => {
 async function main() {
 	try {
 		await rest.put(Routes.applicationGuildCommands("1051643493577130004", "1051649341137354874"), { body: commands });
+		await rest.put(Routes.applicationGuildCommands("1051643493577130004", "689161030714392612"), { body: commands });
 		client.login(token);
 	} catch (e) {
 		console.error(e);

@@ -14,10 +14,10 @@ export async function kill(i, c) {
 		)
 		.setDescription(
 			`MY apologies.
-		Just kidding! Just kidding! 
-		**Nobody liked you!**
+Just kidding! Just kidding! 
+**Nobody liked you!**
 		
-		<@${i.options.get("person").user.id}>`
+<@${i.options.get("person").user.id}>`
 		)
 		.setThumbnail(`https://cdn.discordapp.com/avatars/${i.options.get("person").user.id}/${i.options.get("person").user.avatar}.png`)
 		.setTimestamp()
@@ -29,7 +29,7 @@ export async function kill(i, c) {
 
 	const embed_question = new EmbedBuilder()
 		.setColor(0x809696)
-		.setTitle(`@${i.options.get("person").user.username}#${i.options.get("person").user.discriminator} you died.`)
+		.setTitle(`@${i.options.get("person").user.username}#${i.options.get("person").user.discriminator}, you died.`)
 		.setDescription(`Do you feel well-killed?`)
 		.setTimestamp()
 		.setFooter({
