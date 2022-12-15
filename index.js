@@ -15,7 +15,7 @@ import { inspire } from "./src/functions/inspire.js";
 import { nsfw } from "./src/functions/nsfw.js";
 import { pictureofus } from "./src/functions/pictureofus.js";
 import { quote } from "./src/functions/quote.js";
-import { imge } from "./src/functions/image.js";
+import { image } from "./src/functions/image.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const rest = new REST({ version: "10" }).setToken(token);
@@ -66,6 +66,9 @@ client.on(Events.InteractionCreate, (interaction) => {
 			break;
 		case "quote":
 			quote(interaction, client);
+			break;
+		case "image":
+			image(interaction);
 			break;
 	}
 });
