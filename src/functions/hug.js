@@ -47,7 +47,7 @@ Give someone love too!
 	i.reply({ embeds: [embed, embed_question], components: [btn1, btn2] });
 	setTimeout(() => {
 		i.editReply({ embeds: [embed], components: [] });
-	}, 25000);
+	}, 60000);
 
 	console.log(
 		`${timeConverter(i.createdTimestamp)}

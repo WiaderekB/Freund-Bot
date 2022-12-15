@@ -30,6 +30,13 @@ const dice = new SlashCommandBuilder()
 		return option.setName("d").setDescription("Dice size. 😑").setRequired(true);
 	});
 
+const image = new SlashCommandBuilder()
+	.setName("image")
+	.setDescription("Freund will find EXACTLY what you want!")
+	.addStringOption((option) => {
+		return option.setName("description").setDescription("What are you looking for? 😑").setRequired(true);
+	});
+
 const kill = new SlashCommandBuilder()
 	.setName("kill")
 	.setDescription("Freund will kill someone for you!")
@@ -42,5 +49,5 @@ const hug = new SlashCommandBuilder()
 
 const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
 
-const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus, quote];
+const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus, quote, image];
 export default commands;
