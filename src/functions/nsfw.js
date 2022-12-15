@@ -8,7 +8,7 @@ export async function nsfw(i) {
 	const embed = new EmbedBuilder()
 		.setColor(0x809696)
 		.setTitle("That'a NSFW!!")
-		.setAuthor({ name: "YOU! 😁", iconURL: `https://cdn.discordapp.com/avatars/${i.user.id}/${i.user.avatar}.png` })
+		.setAuthor({ name: "YOU. 🤨", iconURL: `https://cdn.discordapp.com/avatars/${i.user.id}/${i.user.avatar}.png` })
 		.setTimestamp()
 		.setImage(gif_result.results[0].media[0].gif.url)
 		.setFooter({

@@ -2,7 +2,9 @@ import { SlashCommandBuilder } from "discord.js";
 
 const ping = new SlashCommandBuilder().setName("ping").setDescription("Replies with Pong!");
 
-const meme = new SlashCommandBuilder().setName("meme").setDescription("Freund will make you HAPPY! ...with not funny meme.");
+const quote = new SlashCommandBuilder().setName("quote").setDescription("Replies with a random QUOTE!");
+
+const meme = new SlashCommandBuilder().setName("meme").setDescription("Freund will make you HAPPY! ...with a not funny meme.");
 
 const nsfw = new SlashCommandBuilder().setName("nsfw").setDescription("Freund will send you NSFW!");
 
@@ -40,5 +42,5 @@ const hug = new SlashCommandBuilder()
 
 const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
 
-const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus];
+const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus, quote];
 export default commands;

@@ -33,7 +33,7 @@ export function pictureofus(i) {
 
 	const embed = new EmbedBuilder()
 		.setColor(0x809696)
-		.setTitle("Have fun of this guy!!!")
+		.setTitle("Make fun of this guy!!!")
 		.setAuthor({ name: "YOU! 😁", iconURL: `https://cdn.discordapp.com/avatars/${i.user.id}/${i.user.avatar}.png` })
 		.setTimestamp()
 		.setImage(pic)
