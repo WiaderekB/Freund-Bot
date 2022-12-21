@@ -89,6 +89,11 @@ import http from "http";
 
 const router = express.Router();
 
+router.use((req, res, next) => {
+	res.header("Access-Control-Allow-Methods", "GET");
+	next();
+});
+
 app.use("/api/v1", router);
 
 const server = http.createServer(app);
