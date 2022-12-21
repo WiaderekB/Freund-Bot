@@ -24,6 +24,7 @@ client.once(Events.ClientReady, async (c) => {
 	console.clear();
 	console.log(`${timeConverter(c.readyTimestamp)}
 	Ready! Logged in as ${c.user.tag}`);
+	return 200;
 });
 
 async function main() {
