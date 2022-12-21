@@ -87,6 +87,7 @@ main();
 import express from "express";
 import http from "http";
 
+const app = express();
 const router = express.Router();
 
 router.use((req, res, next) => {
