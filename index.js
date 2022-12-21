@@ -84,7 +84,12 @@ client.on(Events.MessageCreate, (m) => {
 
 main();
 
+import express from "express";
 import http from "http";
+
+const router = express.Router();
+
+app.use("/api/v1", router);
 
 const server = http.createServer(app);
 server.listen(3000);
