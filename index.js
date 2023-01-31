@@ -24,6 +24,7 @@ client.once(Events.ClientReady, async (c) => {
 	console.clear();
 	console.log(`${timeConverter(c.readyTimestamp)}
 	Ready! Logged in as ${c.user.tag}`);
+	return 200;
 });
 
 async function main() {
@@ -82,3 +83,19 @@ client.on(Events.MessageCreate, (m) => {
 });
 
 main();
+
+import express from "express";
+import http from "http";
+
+const app = express();
+const router = express.Router();
+
+router.use((req, res, next) => {
+	res.header("Access-Control-Allow-Methods", "GET");
+	next();
+});
+
+app.use("/api/v1", router);
+
+const server = http.createServer(app);
+server.listen(3000);
