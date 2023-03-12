@@ -16,6 +16,7 @@ import { nsfw } from "./src/functions/nsfw.js";
 import { pictureofus } from "./src/functions/pictureofus.js";
 import { quote } from "./src/functions/quote.js";
 import { image } from "./src/functions/image.js";
+import { vore } from "./src/functions/vore.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const rest = new REST({ version: "10" }).setToken(token);
@@ -70,6 +71,9 @@ client.on(Events.InteractionCreate, (interaction) => {
 			break;
 		case "image":
 			image(interaction);
+			break;
+		case "vore":
+			vore(interaction);
 			break;
 	}
 });

@@ -15,12 +15,7 @@ const pictureofus = new SlashCommandBuilder()
 		option
 			.setName("who")
 			.setDescription("The person you want picture of")
-			.addChoices(
-				{ name: "Fip", value: "filip" },
-				{ name: "Adm", value: "adam" },
-				{ name: "Kcpr", value: "kacper" },
-				{ name: "Brtek", value: "bartek" }
-			)
+			.addChoices({ name: "Fip", value: "filip" }, { name: "Adm", value: "adam" }, { name: "Kcpr", value: "kacper" }, { name: "Brtek", value: "bartek" })
 	);
 
 const dice = new SlashCommandBuilder()
@@ -49,5 +44,7 @@ const hug = new SlashCommandBuilder()
 
 const inspire = new SlashCommandBuilder().setName("inspire").setDescription("Freund will INSPIRE you with a DEEEP quote.");
 
-const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus, quote, image];
+const vore = new SlashCommandBuilder().setName("vore").setDescription("Kram likes vore???");
+
+const commands = [ping, meme, dice, kill, hug, inspire, nsfw, pictureofus, quote, image, vore];
 export default commands;
